@@ -2,12 +2,12 @@ import React, { FC, useContext } from "react";
 import { RouterContext } from "./context";
 import { matchPath } from "react-router";
 
-export interface SwitchProps {
-  children?: React.ReactNode;
-  location?: Location;
-}
+// export interface SwitchProps {
+//   children?: React.ReactNode;
+//   location?: Location;
+// }
 
-const Switch: FC<SwitchProps> = (props) => {
+const Switch = (props) => {
   const context = useContext(RouterContext);
   const location = props.location || context.location;
   // match是用来标识是否匹配Switch
@@ -22,6 +22,7 @@ const Switch: FC<SwitchProps> = (props) => {
         : context.match;
     }
   });
+
   return match
     ? React.cloneElement(children, { location, computedMatch: match })
     : null;

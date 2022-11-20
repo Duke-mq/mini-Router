@@ -1,14 +1,14 @@
 import React, { FC, ReactElement, useContext } from "react";
 import { RouterContext } from "./context";
 import { matchPath } from "react-router";
-interface RouteProps {
-  children?: React.ReactNode;
-  path?: string;
-  component?: ReactElement;
-  location?: Location;
-  [key: string]: any;
-}
-const Route: FC<RouteProps> = (props) => {
+// interface RouteProps {
+//   children?: React.ReactNode;
+//   path?: string;
+//   component?: ReactElement;
+//   location?: Location;
+//   [key: string]: any;
+// }
+const Route = (props) => {
   const context = useContext(RouterContext);
   const location = props.location || context.location;
   const match = props.computedMatch
@@ -21,7 +21,6 @@ const Route: FC<RouteProps> = (props) => {
     location,
     match,
   };
-  console.log("newRouterProps", newRouterProps);
   /*
     ToDo:react-router-dom v6.0以上的版本props只有element,或者用api去创建Router
   */
@@ -41,7 +40,7 @@ const Route: FC<RouteProps> = (props) => {
 
   return (
     <RouterContext.Provider value={newRouterProps}>
-      {children}
+      {renderChildren}
     </RouterContext.Provider>
   );
 };
