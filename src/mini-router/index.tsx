@@ -1,12 +1,13 @@
 import React from "react";
 // import { Router, Route, useHistory, useListen, Switch } from "./router";
-import { Router, Route } from "./router";
 
 /* 引用业务组件 */
 import Detail from "./testPage/detail";
 import Home from "./testPage/home";
 import List from "./testPage/list";
 import "./index.scss";
+import Switch from "./component/switch";
+import { Route, Router } from "./router";
 
 // const menusList = [
 //   {

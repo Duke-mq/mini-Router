@@ -1,4 +1,4 @@
-import Router from "./component/Router";
-import Route from "./component/Route";
+import Router from "./component/router";
+import Route from "./component/route";
 
 export { Router, Route };

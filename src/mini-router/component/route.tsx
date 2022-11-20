@@ -2,10 +2,10 @@ import React, { FC, ReactElement, useContext } from "react";
 import { RouterContext } from "./context";
 import { matchPath } from "react-router";
 interface RouteProps {
-  children: React.ReactNode;
-  path: string;
-  component: ReactElement;
-  location: Location;
+  children?: React.ReactNode;
+  path?: string;
+  component?: ReactElement;
+  location?: Location;
   [key: string]: any;
 }
 const Route: FC<RouteProps> = (props) => {

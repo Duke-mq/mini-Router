@@ -1,10 +1,9 @@
 import "./App.css";
-import { Router } from "./mini-router/router";
-
+import Index from "./mini-router/testPage/detail";
 function App() {
   return (
     <div className="App">
-      <Router></Router>
+      <Index />
     </div>
   );
 }
